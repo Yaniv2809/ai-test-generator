@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python ai_test_generator.py --help)",
+      "Bash(python ai_test_generator.py --api-url https://jsonplaceholder.typicode.com/posts/1 --security --mask-pii --dry-run --verbose)",
+      "Bash(python ai_test_generator.py --openapi https://petstore3.swagger.io/api/v3/openapi.json --dry-run)",
+      "Bash(python ai_test_generator.py --provider ollama --api-url https://jsonplaceholder.typicode.com/posts/1 --dry-run)"
+    ]
+  }
+}

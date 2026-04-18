@@ -1,0 +1,17 @@
+# AI Test Generator — project-level config
+# Checked into git so all team members share the same defaults.
+# CLI arguments always take priority over values here.
+#
+# Supported keys:
+#   provider:    openai | groq | ollama  (default: openai)
+#   model:       any model ID supported by the chosen provider
+#   rules_file:  path to your team's custom architecture rules .txt
+#   security:    true | false  — include OWASP security tests
+#   pii_masking: true | false  — mask PII before sending to AI
+#   verbose:     true | false
+
+provider: openai
+# model: gpt-4o-mini
+# rules_file: ./my_framework_rules.txt
+# security: false
+# pii_masking: false

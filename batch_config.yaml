@@ -1,0 +1,37 @@
+# AI Test Generator — Batch Config
+# Run with: python ai_test_generator.py --batch batch_config.yaml
+
+provider: openai           # openai | groq | ollama
+model: gpt-4o-mini         # leave blank to use provider default
+output_dir: ./generated_tests/
+rules_file: my_framework_rules.txt   # optional — your team's architecture rules
+
+security: false            # set true to add OWASP security tests to every generation
+pii_masking: false         # set true to mask emails/UUIDs/JWTs before sending to AI
+
+# ── Option A: generate tests from an OpenAPI/Swagger spec ─────────────────────
+# openapi_spec: ./swagger.json
+# openapi_spec: https://petstore3.swagger.io/api/v3/openapi.json
+
+# ── Option B: generate tests from a Postman collection ────────────────────────
+# postman_collection: ./MyAPI.postman_collection.json
+
+# ── Option C: explicit list of API endpoints ───────────────────────────────────
+api_tests:
+  - url: https://jsonplaceholder.typicode.com/posts/1
+    method: GET
+
+  - url: https://jsonplaceholder.typicode.com/posts
+    method: POST
+    body: '{"title": "foo", "body": "bar", "userId": 1}'
+
+  # Authenticated endpoint example:
+  # - url: https://api.example.com/profile
+  #   method: GET
+  #   auth_token: "your_bearer_token_here"
+  #   headers:
+  #     - "X-Tenant: acme"
+  #     - "Accept: application/json"
+
+web_tests:
+  - url: https://example.com

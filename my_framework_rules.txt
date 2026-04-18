@@ -1,0 +1,3 @@
+1. We use a custom verifier class called 'SafeVerifications.check_text()'. Do NOT use native Playwright 'expect'.
+2. Do not use standard Pytest fixtures, our setup fixture is called 'init_browser_session'.
+3. Always add @allure.severity(allure.severity_level.NORMAL).
