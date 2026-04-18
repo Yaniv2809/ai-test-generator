@@ -336,7 +336,7 @@ ai-test-generator/
 
 ## Origin
 
-Built from production AI test generation logic in the **Financial Integrity Ecosystem** project. Extracted and open-sourced so any QA Engineer can use it in any project — with or without an internet connection.
+Built from production AI test generation logic in the **[Financial Integrity Ecosystem](https://github.com/Yaniv2809/Financial-Integrity-Ecosystem/tree/main)** project. Extracted and open-sourced so any QA Engineer can use it in any project — with or without an internet connection.
 
 ---
 
